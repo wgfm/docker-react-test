@@ -6,4 +6,4 @@ before_install:
   -  docker build -t wgfm/docker-react-test -f Dockerfile.dev .
 
 script:
-  - docker run wgfm/docker-react-test npm run test -- --coverage
+  - docker run -e CI=true wgfm/docker-react-test npm run test -- --coverage
